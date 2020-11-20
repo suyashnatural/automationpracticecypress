@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-20T01:28:18.782Z",
+    "end": "2020-11-20T01:28:46.140Z",
+    "duration": 27358,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "af5c40f6-feed-4e8e-8462-e8a3326b2c61",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TC_004.spec.js",
+      "file": "cypress/integration/examples/TC_004.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "80206004-555c-4cc3-801e-1080ac54bab6",
+          "title": "Verify the checkout journey by adding any product to the cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add the product printed chiffon dress into the cart, checkout and validate",
+              "fullTitle": "Verify the checkout journey by adding any product to the cart Add the product printed chiffon dress into the cart, checkout and validate",
+              "timedOut": null,
+              "duration": 24861,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "summerDressPage = homePage.gotoWomensSummerDress(_baseFixture[\"default\"].waitTime);\ncy.url().should('include', _baseFixture[\"default\"].summerDressPageURL);\ncy.log(_baseFixture[\"default\"][\"step-1\"]);\nproductPage = summerDressPage.navigateToChiffonDressPage();\ncy.url().should('include', _baseFixture[\"default\"].productPageURL);\ncy.log(_baseFixture[\"default\"][\"step-2\"]);\nproductPage.addProductToCart();\nproductPage.verifyProductAddedToCart();\ncartPage = productPage.proceedToCheckout();\ncy.url().should('include', _baseFixture[\"default\"].cartPageURL);\ncartPage.verifyCartInformation();\nauthPage = cartPage.proceedToAddressPage();\ncy.log(_baseFixture[\"default\"][\"step-3\"]);\nshoppingAddressPage = authPage.signIntoApplication(_baseFixture[\"default\"].userName, _baseFixture[\"default\"].password);\nshoppingAddressPage.getSignOutBtn().should('be.visible');\ncy.url().should('include', _baseFixture[\"default\"].shoppingPageURL);\ncy.log(_baseFixture[\"default\"][\"step-4\"]);\nshoppingAddressPage.addCommentForTheOrder(_baseFixture[\"default\"].addressComment);\nshippingPage = shoppingAddressPage.gotoCheckout();\nshippingPage.validateShippingPage();\ncy.log(_baseFixture[\"default\"][\"step-5\"]);\nshippingPage.readTermsOfServieAndClose();\nshippingPage.checkTermsConditionCheckBox();\npaymentPage = shippingPage.proceedToPaymentPage();\npaymentPage.validatePaymentPage();\ncy.log(_baseFixture[\"default\"][\"step-6\"]);\nif (_baseFixture[\"default\"].paymentMethod === 'bank') {\n  orderSummaryPage = paymentPage.payByBankWire();\n  orderSummaryPage.validateOrderSummaryPageViaBankTransfer();\n  cy.log(_baseFixture[\"default\"][\"step-7\"]);\n  orderConfirmationPage = orderSummaryPage.confirmMyOrder();\n  orderConfirmationPage.validateOrderConfirmationByBank();\n} else if (_baseFixture[\"default\"].paymentMethod === 'check') {\n  orderSummaryPage = paymentPage.payByCheck();\n  orderSummaryPage.validateOrderSummaryPageViaCheck();\n  cy.log(_baseFixture[\"default\"][\"step-7\"]);\n  orderConfirmationPage = orderSummaryPage.confirmMyOrder();\n  orderConfirmationPage.validateOrderConfirmationByCheck();\n}",
+              "err": {},
+              "uuid": "1612105c-c4fc-4b91-a060-e1e6d04092a2",
+              "parentUUID": "80206004-555c-4cc3-801e-1080ac54bab6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1612105c-c4fc-4b91-a060-e1e6d04092a2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24861,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

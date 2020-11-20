@@ -1,0 +1,21 @@
+{
+  "website": "http://automationpractice.com/",
+  "waitTime": 300,
+  "summerDressPageURL":"controller=category",
+  "productPageURL": "id_product=7&controller=product",
+  "cartPageURL": "controller=order",
+  "userName": "lol@lol.com",
+  "password": "123456",
+  "shoppingPageURL": "controller=order&step=1&multi-shipping=0",
+  "addressComment": "My Delivery Address and Billing Address are the same",
+  "productName": "printed chiffon dress",
+  "paymentMethod": "bank",
+  "_comment": "paymentMethod could be 'bank' or 'check' ",
+  "step-1": "Navigate to Womens Summer Dress Page",
+  "step-2": "adding product to the cart",
+  "step-3": "login to the application",
+  "step-4": "Add comment to the order",
+  "step-5": "Accept Shipping Terms and Condition",
+  "step-6": "Initiate Payment",
+  "step-7": "Check Order Confirmation"
+}

@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 1,
+    "pending": 0,
+    "failures": 5,
+    "start": "2020-11-20T01:27:59.984Z",
+    "end": "2020-11-20T01:28:13.119Z",
+    "duration": 13135,
+    "testsRegistered": 6,
+    "passPercent": 16.666666666666664,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "363ea745-02ba-4c55-bad5-d8f44008c39f",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TC_003.spec.js",
+      "file": "cypress/integration/examples/TC_003.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+          "title": "Automate Women > Dresses > Summer Dresses listing page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to Womens Summer Dress Page",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Navigate to Womens Summer Dress Page",
+              "timedOut": null,
+              "duration": 6741,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "summerDressPage = homePage.gotoWomensSummerDress(_baseFixture[\"default\"].waitTime);\ncy.url().should('include', 'controller=category');",
+              "err": {},
+              "uuid": "080b0969-ce8d-40cd-8427-c5746c56c715",
+              "parentUUID": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate using the filters and its results",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate using the filters and its results",
+              "timedOut": null,
+              "duration": 580,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "summerDressPage.checkGirlyStyleFilter();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Expected Filter Error\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Filter isn't working",
+                "estack": "Error: Expected Failure: Filter isn't working\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1138:13)",
+                "diff": null
+              },
+              "uuid": "1c143461-b94e-4103-ad95-189fe0f9e5db",
+              "parentUUID": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Price: Lowest first sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Price: Lowest first sort",
+              "timedOut": null,
+              "duration": 634,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Price: Lowest first sort\nsummerDressPage.sortByLowestPriceFirst();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Price Sort Error (L->H)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Price: Lowest first sort isn't working",
+                "estack": "Error: Expected Failure: Price: Lowest first sort isn't working\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1145:13)",
+                "diff": null
+              },
+              "uuid": "8df492f8-e8f5-48f6-8082-6bbecfa0679e",
+              "parentUUID": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Price: Highest first sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Price: Highest first sort",
+              "timedOut": null,
+              "duration": 708,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Price: Highest first sort\nsummerDressPage.sortByHighestPriceFirst();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Price Sort Error (H->L)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Price: Highest first sort isn't working",
+                "estack": "Error: Expected Failure: Price: Highest first sort isn't working\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1152:13)",
+                "diff": null
+              },
+              "uuid": "66b981e2-d937-49b3-b482-26ce3f573091",
+              "parentUUID": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Product Name: A to Z sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Product Name: A to Z sort",
+              "timedOut": null,
+              "duration": 647,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Product Name: A to Z\nsummerDressPage.sortByProductNameAtoZ();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Name Sort Error (A->Z)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Product Name: A to Z sort isn't working",
+                "estack": "Error: Expected Failure: Product Name: A to Z sort isn't working\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1159:13)",
+                "diff": null
+              },
+              "uuid": "19155203-3372-4b27-9881-b875b39e0d95",
+              "parentUUID": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Product Name: Z to A sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Product Name: Z to A sort",
+              "timedOut": null,
+              "duration": 651,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Product Name: Z to A\nsummerDressPage.sortByProductNameZtoA();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Name Sort Error (Z->A)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Product Name: Z to A sort isn't working",
+                "estack": "Error: Expected Failure: Product Name: Z to A sort isn't working\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1166:13)",
+                "diff": null
+              },
+              "uuid": "ccff78d2-080f-47ab-8f02-823cf4661bda",
+              "parentUUID": "9484ffb4-3aa0-47b5-875c-da62fe1747d5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "080b0969-ce8d-40cd-8427-c5746c56c715"
+          ],
+          "failures": [
+            "1c143461-b94e-4103-ad95-189fe0f9e5db",
+            "8df492f8-e8f5-48f6-8082-6bbecfa0679e",
+            "66b981e2-d937-49b3-b482-26ce3f573091",
+            "19155203-3372-4b27-9881-b875b39e0d95",
+            "ccff78d2-080f-47ab-8f02-823cf4661bda"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9961,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

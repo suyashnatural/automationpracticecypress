@@ -1,0 +1,47 @@
+{
+    "headerBannerLink": "http://automationpractice.com/modules/blockbanner/img/sale70.png",
+    "contactUsNowNumber": "0123-456-789",
+    "contactUsLink": "http://automationpractice.com/index.php?controller=contact",
+    "contactUsTitle": "Contact Us",
+    "contactUsText": "Contact us",
+    "signInLink": "http://automationpractice.com/index.php?controller=my-account",
+    "signInTitle": "Log in to your customer account",
+    "signInText": "Sign in",
+    "headerLogoTitle": "My Store",
+    "headerLogoLink": "http://automationpractice.com/",
+    "footerStaticText": "© 2014 Ecommerce software by PrestaShop™",
+    "footerCategoryLink": "http://automationpractice.com/index.php?id_category=3&controller=category",
+    "footerCategoryTitle": "You will find here all woman fashion collections.  \n This category includes all the basics of your wardrobe and much more: \n shoes, accessories, printed t-shirts, feminine dresses, women's jeans!",
+    "storePhoneNum": "(347) 466-7432",
+    "storeEmailAddress": "support@seleniumframework.com",
+    "socialList": [
+        "Facebook",
+        "Twitter",
+        "Youtube",
+        "Google Plus"
+    ],
+    "footerMyAccountList": [
+        "My orders",
+        "My credit slips",
+        "My addresses",
+        "My personal info"
+    ],
+    "footerCategoriesList": [
+        "Women"
+    ],
+    "footerInfoList": [
+        "Specials",
+        "New products",
+        "Best sellers",
+        "Our stores",
+        "Contact us",
+        "Terms and conditions of use",
+        "About us",
+        "Sitemap"
+    ],
+    "footerStoreInfoList": [
+        "\n            \t\tSelenium Framework, Research Triangle Park,\nNorth Carolina,\nUSA            \t",
+        "Call us now:",
+        "Email:"
+    ]
+}

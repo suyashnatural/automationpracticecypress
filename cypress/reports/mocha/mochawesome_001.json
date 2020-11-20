@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-20T01:27:35.290Z",
+    "end": "2020-11-20T01:27:53.089Z",
+    "duration": 17799,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2e8997d2-62b5-4d62-9366-e06641512cc3",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TC_002.spec.js",
+      "file": "cypress/integration/examples/TC_002.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+          "title": "Automate Newsletter subscription scenarios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate the default text of the newsletter box",
+              "fullTitle": "Automate Newsletter subscription scenarios validate the default text of the newsletter box",
+              "timedOut": null,
+              "duration": 4517,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].defaultText);",
+              "err": {},
+              "uuid": "4fed6f0a-7ab1-44ff-8e58-c417fd1b500c",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate that user can register with valid email for the newsletter",
+              "fullTitle": "Automate Newsletter subscription scenarios validate that user can register with valid email for the newsletter",
+              "timedOut": null,
+              "duration": 2014,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().clear();\nhomepage.getNewsLetterEmailBox().type(rand + _newletter[\"default\"].emailDomain);\nhomepage.getSubmitNewsLetterBtn().click();\nhomepage.getNewsletterAlert().should('have.text', _newletter[\"default\"].successfulSubscription);\nhomepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].successMsg);",
+              "err": {},
+              "uuid": "c3e65146-4fda-4153-a603-4a8077e8c122",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate that error message is generated when using duplicate email",
+              "fullTitle": "Automate Newsletter subscription scenarios validate that error message is generated when using duplicate email",
+              "timedOut": null,
+              "duration": 1722,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().clear();\nhomepage.getNewsLetterEmailBox().type(_newletter[\"default\"].subscriptionEmail);\nhomepage.getSubmitNewsLetterBtn().click();\nhomepage.getNewsletterAlert().should('have.text', _newletter[\"default\"].emailExists);\nhomepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].emailPresent);",
+              "err": {},
+              "uuid": "9a0e2090-e182-4ddf-b462-d0066d2730c2",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate that newsletter field considers the leading spaces as invalid input",
+              "fullTitle": "Automate Newsletter subscription scenarios validate that newsletter field considers the leading spaces as invalid input",
+              "timedOut": null,
+              "duration": 1594,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().clear();\nhomepage.getNewsLetterEmailBox().type(_newletter[\"default\"].emailWithLeadingSpaces);\nhomepage.getSubmitNewsLetterBtn().click();\nhomepage.getNewsletterAlert().should('have.text', _newletter[\"default\"].invalidEmailMsg);\nhomepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].invalidEmailValue);",
+              "err": {},
+              "uuid": "d32e6294-e3e7-4576-ba76-97d45ca9ba96",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate that newsletter field considers the trailing spaces as invalid input",
+              "fullTitle": "Automate Newsletter subscription scenarios validate that newsletter field considers the trailing spaces as invalid input",
+              "timedOut": null,
+              "duration": 1740,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().clear();\nhomepage.getNewsLetterEmailBox().type(_newletter[\"default\"].emailWithTrailingSpaces);\nhomepage.getSubmitNewsLetterBtn().click();\nhomepage.getNewsletterAlert().should('have.text', _newletter[\"default\"].invalidEmailMsg);\nhomepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].invalidEmailValue);",
+              "err": {},
+              "uuid": "980184dd-775b-4e64-a056-cffe5367cac4",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate that user cannot signup to the newsletter when using invalid email",
+              "fullTitle": "Automate Newsletter subscription scenarios validate that user cannot signup to the newsletter when using invalid email",
+              "timedOut": null,
+              "duration": 1802,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().clear();\nhomepage.getNewsLetterEmailBox().type(_newletter[\"default\"].invalidEmail);\nhomepage.getSubmitNewsLetterBtn().click();\nhomepage.getNewsletterAlert().should('have.text', _newletter[\"default\"].invalidEmailMsg);\nhomepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].invalidEmailValue);",
+              "err": {},
+              "uuid": "ba878dec-3f0c-4a3e-8740-95f7ded1c3f4",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate that error message is generated when using blank email",
+              "fullTitle": "Automate Newsletter subscription scenarios validate that error message is generated when using blank email",
+              "timedOut": null,
+              "duration": 1457,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homepage.getNewsLetterEmailBox().clear();\nhomepage.getNewsLetterEmailBox().type(_newletter[\"default\"].blank);\nhomepage.getSubmitNewsLetterBtn().click();\nhomepage.getNewsletterAlert().should('have.text', _newletter[\"default\"].invalidEmailMsg);\nhomepage.getNewsLetterEmailBox().should('have.attr', 'value', _newletter[\"default\"].invalidEmailValue);",
+              "err": {},
+              "uuid": "6beea1b6-4574-47d9-ae5e-9924372a6fbb",
+              "parentUUID": "ef28a723-7301-4cd8-8230-65b67e3dfd40",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4fed6f0a-7ab1-44ff-8e58-c417fd1b500c",
+            "c3e65146-4fda-4153-a603-4a8077e8c122",
+            "9a0e2090-e182-4ddf-b462-d0066d2730c2",
+            "d32e6294-e3e7-4576-ba76-97d45ca9ba96",
+            "980184dd-775b-4e64-a056-cffe5367cac4",
+            "ba878dec-3f0c-4a3e-8740-95f7ded1c3f4",
+            "6beea1b6-4574-47d9-ae5e-9924372a6fbb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14846,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

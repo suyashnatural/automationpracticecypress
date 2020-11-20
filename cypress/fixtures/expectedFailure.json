@@ -1,0 +1,7 @@
+{
+    "Expected Filter Error": "Expected Failure: Filter isn't working",
+    "Price Sort Error (L->H)": "Expected Failure: Price: Lowest first sort isn't working",
+    "Price Sort Error (H->L)": "Expected Failure: Price: Highest first sort isn't working",
+    "Name Sort Error (A->Z)": "Expected Failure: Product Name: A to Z sort isn't working",
+    "Name Sort Error (Z->A)": "Expected Failure: Product Name: Z to A sort isn't working"
+}

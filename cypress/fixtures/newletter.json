@@ -1,0 +1,16 @@
+{
+    "emailDomain": "@gmail.com",
+    "defaultText": "Enter your e-mail",
+    "successfulSubscription": " Newsletter : You have successfully subscribed to this newsletter.",
+    "successMsg": "You have successfully subscribed to this newsletter.",
+    "subscriptionEmail": "abc@gmail.com",
+    "emailExists": " Newsletter : This email address is already registered.",
+    "emailPresent": "This email address is already registered.",
+    "emailWithLeadingSpaces": "   abc@gmail.com",
+    "invalidEmailMsg": " Newsletter : Invalid email address.",
+    "invalidEmailValue": "Invalid email address.",
+    "emailWithTrailingSpaces": "abc@gmail.com   ",
+    "invalidEmail": "abc.gmail.com",
+    "blank": " ",
+    "randomFunction": "Math.random().toString(36).substring(4)"
+}
