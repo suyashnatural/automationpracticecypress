@@ -1,9 +1,17 @@
 # AutomationPracticeCypress
+Project to automate the website "http://automationpractice.com/" using cypress.io and javascript
 
-# Steps to run this project at your local system?
+## Steps to run this project at your local system
 
 ## clone this repo to a local directory
-git@github.com:<your-github-username>/automationpracticecypress.git
+- with ssl
+git@github.com:suyashnatural/automationpracticecypress.git
+
+- with https
+https://github.com/suyashnatural/automationpracticecypress.git
+
+- with github cli
+gh repo clone suyashnatural/automationpracticecypress
 
 ## cd into the cloned repo
 cd Axelerant
