@@ -4,10 +4,10 @@ Project to automate the website "http://automationpractice.com/" using cypress.i
 ## Steps to run this project at your local system
 
 ## Step-1: clone this repo to a local directory
-- "with ssl" -or-
+- "with ssl"
 git@github.com:suyashnatural/automationpracticecypress.git
 
-- "with https" -or-
+- "with https"
 https://github.com/suyashnatural/automationpracticecypress.git
 
 - "with github cli"
@@ -29,18 +29,18 @@ npm run test-firefox
 ## To run the tests in Chrome
 npm run test-chrome
 
-## Test Results - Reports
+## Step-5: Test Results - Reports
 cypress/reports/mochareports/report.html (Open with any browser)
 
 ## Test Results - Videos
 cypress/videos/examples
 
 ## Successful Test Report
-![Alt text](successfulreportsnapshot.png?raw=true "Successful Report Snapshot")
+![Alt text](successfulreportsnapshot.png?raw=true "Successful Test Report Snapshot")
 
 ---
-**NOTE**
-The automation scenario found bugs, hence "TC_003.spec.js" is failed with custom error thrown to the user.
+**NOTE:**
+The automation scenarios found bugs, hence "TC_003.spec.js" is failed with custom error thrown to the user.
 
 ---
 
