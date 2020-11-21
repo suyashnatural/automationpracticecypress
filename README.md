@@ -1,25 +1,28 @@
 # AutomationPracticeCypress
-Project to automate the website "http://automationpractice.com/" using cypress.io and javascript
+Project to automate the website "http://automationpractice.com/" using cypress.io and javascript and implemented using Page-Objects design pattern
 
 ## Steps to run this project at your local system
 
 ## Step-1: clone this repo to a local directory
-- "with ssl"
+- "with ssl" -->
 git@github.com:suyashnatural/automationpracticecypress.git
 
-- "with https"
+- "with https" -->
 https://github.com/suyashnatural/automationpracticecypress.git
 
-- "with github cli"
+- "with github cli" -->
 gh repo clone suyashnatural/automationpracticecypress
 
 ## Step-2: cd into the cloned repo
-cd Axelerant
+cd automationpracticscypress
 
-## Step-3: install the node_modules
+## Step-3 : Install Cypress
+[Follow these instructions to install cypress](https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-requirements)
+
+## Step-4: install the node_modules
 npm install
 
-## Step-4: To run the tests in Command Line (CLI) and headless mode (default electron browser)
+## Step-5: To run the tests in Command Line (CLI) and headless mode (default electron browser)
 npm run test
 
 ## Crossbrowsers 
@@ -29,7 +32,7 @@ npm run test-firefox
 ## To run the tests in Chrome
 npm run test-chrome
 
-## Step-5: Test Results - Reports
+## Step-6: Test Results - Reports
 cypress/reports/mochareports/report.html (Open with any browser)
 
 ## Test Results - Videos
