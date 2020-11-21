@@ -1,0 +1,223 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 1,
+    "pending": 0,
+    "failures": 5,
+    "start": "2020-11-21T02:08:50.076Z",
+    "end": "2020-11-21T02:09:06.420Z",
+    "duration": 16344,
+    "testsRegistered": 6,
+    "passPercent": 16.666666666666664,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "080fe170-de28-434d-a8f9-583761280fd8",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TC_003.spec.js",
+      "file": "cypress/integration/examples/TC_003.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+          "title": "Automate Women > Dresses > Summer Dresses listing page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to Womens Summer Dress Page",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Navigate to Womens Summer Dress Page",
+              "timedOut": null,
+              "duration": 6933,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "summerDressPage = homePage.gotoWomensSummerDress(_baseFixture[\"default\"].waitTime);\ncy.url().should('include', 'controller=category');",
+              "err": {},
+              "uuid": "c3d67cb9-fc8f-4990-a46c-f6cceaf3f65e",
+              "parentUUID": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate using the filters and its results",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate using the filters and its results",
+              "timedOut": null,
+              "duration": 1084,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "summerDressPage.checkGirlyStyleFilter();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Expected Filter Error\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Filter isn't working",
+                "estack": "Error: Expected Failure: Filter isn't working\n./cypress/integration/examples/TC_003.spec.js/</</<@http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1138:13\ngetRet@http://automationpractice.com/__cypress/runner/cypress_runner.js:155117:20\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try@http://automationpractice.com/__cypress/runner/cypress_runner.js:7599:29\nthenFn@http://automationpractice.com/__cypress/runner/cypress_runner.js:155135:20\nthen@http://automationpractice.com/__cypress/runner/cypress_runner.js:155574:21\nwrapByType/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:170040:21\nrunCommand/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:169464:15\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@http://automationpractice.com/__cypress/runner/cypress_runner.js:8260:31\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@http://automationpractice.com/__cypress/runner/cypress_runner.js:8317:18\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx@http://automationpractice.com/__cypress/runner/cypress_runner.js:8354:10\n_drainQueueStep@http://automationpractice.com/__cypress/runner/cypress_runner.js:5036:12\n_drainQueue@http://automationpractice.com/__cypress/runner/cypress_runner.js:5025:24\n../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:5041:16\nAsync/this.drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:4911:14\n",
+                "diff": null
+              },
+              "uuid": "4a741865-ba2a-4b8f-ac0d-033aa30a877f",
+              "parentUUID": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Price: Lowest first sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Price: Lowest first sort",
+              "timedOut": null,
+              "duration": 1219,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Price: Lowest first sort\nsummerDressPage.sortByLowestPriceFirst();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Price Sort Error (L->H)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Price: Lowest first sort isn't working",
+                "estack": "Error: Expected Failure: Price: Lowest first sort isn't working\n./cypress/integration/examples/TC_003.spec.js/</</<@http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1145:13\ngetRet@http://automationpractice.com/__cypress/runner/cypress_runner.js:155117:20\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try@http://automationpractice.com/__cypress/runner/cypress_runner.js:7599:29\nthenFn@http://automationpractice.com/__cypress/runner/cypress_runner.js:155135:20\nthen@http://automationpractice.com/__cypress/runner/cypress_runner.js:155574:21\nwrapByType/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:170040:21\nrunCommand/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:169464:15\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@http://automationpractice.com/__cypress/runner/cypress_runner.js:8260:31\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@http://automationpractice.com/__cypress/runner/cypress_runner.js:8317:18\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx@http://automationpractice.com/__cypress/runner/cypress_runner.js:8354:10\n_drainQueueStep@http://automationpractice.com/__cypress/runner/cypress_runner.js:5036:12\n_drainQueue@http://automationpractice.com/__cypress/runner/cypress_runner.js:5025:24\n../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:5041:16\nAsync/this.drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:4911:14\n",
+                "diff": null
+              },
+              "uuid": "b754c441-e6a7-4521-af70-3a701556c9bb",
+              "parentUUID": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Price: Highest first sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Price: Highest first sort",
+              "timedOut": null,
+              "duration": 1144,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Price: Highest first sort\nsummerDressPage.sortByHighestPriceFirst();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Price Sort Error (H->L)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Price: Highest first sort isn't working",
+                "estack": "Error: Expected Failure: Price: Highest first sort isn't working\n./cypress/integration/examples/TC_003.spec.js/</</<@http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1152:13\ngetRet@http://automationpractice.com/__cypress/runner/cypress_runner.js:155117:20\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try@http://automationpractice.com/__cypress/runner/cypress_runner.js:7599:29\nthenFn@http://automationpractice.com/__cypress/runner/cypress_runner.js:155135:20\nthen@http://automationpractice.com/__cypress/runner/cypress_runner.js:155574:21\nwrapByType/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:170040:21\nrunCommand/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:169464:15\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@http://automationpractice.com/__cypress/runner/cypress_runner.js:8260:31\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@http://automationpractice.com/__cypress/runner/cypress_runner.js:8317:18\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx@http://automationpractice.com/__cypress/runner/cypress_runner.js:8354:10\n_drainQueueStep@http://automationpractice.com/__cypress/runner/cypress_runner.js:5036:12\n_drainQueue@http://automationpractice.com/__cypress/runner/cypress_runner.js:5025:24\n../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:5041:16\nAsync/this.drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:4911:14\n",
+                "diff": null
+              },
+              "uuid": "f154dc46-45fc-4bea-b1b1-4097ccb72c8c",
+              "parentUUID": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Product Name: A to Z sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Product Name: A to Z sort",
+              "timedOut": null,
+              "duration": 1526,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Product Name: A to Z\nsummerDressPage.sortByProductNameAtoZ();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Name Sort Error (A->Z)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Product Name: A to Z sort isn't working",
+                "estack": "Error: Expected Failure: Product Name: A to Z sort isn't working\n./cypress/integration/examples/TC_003.spec.js/</</<@http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1159:13\ngetRet@http://automationpractice.com/__cypress/runner/cypress_runner.js:155117:20\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try@http://automationpractice.com/__cypress/runner/cypress_runner.js:7599:29\nthenFn@http://automationpractice.com/__cypress/runner/cypress_runner.js:155135:20\nthen@http://automationpractice.com/__cypress/runner/cypress_runner.js:155574:21\nwrapByType/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:170040:21\nrunCommand/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:169464:15\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@http://automationpractice.com/__cypress/runner/cypress_runner.js:8260:31\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@http://automationpractice.com/__cypress/runner/cypress_runner.js:8317:18\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx@http://automationpractice.com/__cypress/runner/cypress_runner.js:8354:10\n_drainQueueStep@http://automationpractice.com/__cypress/runner/cypress_runner.js:5036:12\n_drainQueue@http://automationpractice.com/__cypress/runner/cypress_runner.js:5025:24\n../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:5041:16\nAsync/this.drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:4911:14\n",
+                "diff": null
+              },
+              "uuid": "cc605ea9-8a79-43cc-8497-4503c03cc501",
+              "parentUUID": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate sorting functionality - Product Name: Z to A sort",
+              "fullTitle": "Automate Women > Dresses > Summer Dresses listing page Validate sorting functionality - Product Name: Z to A sort",
+              "timedOut": null,
+              "duration": 1066,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Product Name: Z to A\nsummerDressPage.sortByProductNameZtoA();\nsummerDressPage.getLoadingSpinner().should('exist').then(function () {\n  throw new Error(_expectedFailure[\"default\"][\"Name Sort Error (Z->A)\"]);\n});",
+              "err": {
+                "message": "Error: Expected Failure: Product Name: Z to A sort isn't working",
+                "estack": "Error: Expected Failure: Product Name: Z to A sort isn't working\n./cypress/integration/examples/TC_003.spec.js/</</<@http://automationpractice.com/__cypress/tests?p=cypress/integration/examples/TC_003.spec.js:1166:13\ngetRet@http://automationpractice.com/__cypress/runner/cypress_runner.js:155117:20\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/method.js/module.exports/Promise.try@http://automationpractice.com/__cypress/runner/cypress_runner.js:7599:29\nthenFn@http://automationpractice.com/__cypress/runner/cypress_runner.js:155135:20\nthen@http://automationpractice.com/__cypress/runner/cypress_runner.js:155574:21\nwrapByType/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:170040:21\nrunCommand/<@http://automationpractice.com/__cypress/runner/cypress_runner.js:169464:15\ntryCatcher@http://automationpractice.com/__cypress/runner/cypress_runner.js:10325:23\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler@http://automationpractice.com/__cypress/runner/cypress_runner.js:8260:31\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise@http://automationpractice.com/__cypress/runner/cypress_runner.js:8317:18\n../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseCtx@http://automationpractice.com/__cypress/runner/cypress_runner.js:8354:10\n_drainQueueStep@http://automationpractice.com/__cypress/runner/cypress_runner.js:5036:12\n_drainQueue@http://automationpractice.com/__cypress/runner/cypress_runner.js:5025:24\n../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:5041:16\nAsync/this.drainQueues@http://automationpractice.com/__cypress/runner/cypress_runner.js:4911:14\n",
+                "diff": null
+              },
+              "uuid": "a9bfb279-9b9f-4ee7-99d9-a24f12048ff8",
+              "parentUUID": "4df16c88-549c-4c24-ad12-5b18310e4ece",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c3d67cb9-fc8f-4990-a46c-f6cceaf3f65e"
+          ],
+          "failures": [
+            "4a741865-ba2a-4b8f-ac0d-033aa30a877f",
+            "b754c441-e6a7-4521-af70-3a701556c9bb",
+            "f154dc46-45fc-4bea-b1b1-4097ccb72c8c",
+            "cc605ea9-8a79-43cc-8497-4503c03cc501",
+            "a9bfb279-9b9f-4ee7-99d9-a24f12048ff8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12972,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

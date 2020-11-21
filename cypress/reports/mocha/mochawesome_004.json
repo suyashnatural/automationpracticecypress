@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-21T02:08:04.747Z",
+    "end": "2020-11-21T02:08:12.555Z",
+    "duration": 7808,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cfeb1770-a641-4f3a-8b37-1d30f83a4c91",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TC_001.spec.js",
+      "file": "cypress/integration/examples/TC_001.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af70bde7-5db6-4d9c-8401-75b061f0f8ec",
+          "title": "Navigate to multiple pages of the website and automate verification of the header and footer.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verification of homepage header",
+              "fullTitle": "Navigate to multiple pages of the website and automate verification of the header and footer. verification of homepage header",
+              "timedOut": null,
+              "duration": 3860,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('validating the header banner');\nhomepage.getHomePageHeaderBanner().should('have.attr', 'src', _headerFooter[\"default\"].headerBannerLink);\ncy.log('validating the header navigation panel');\nhomepage.getHeaderContactLink().should('have.text', _headerFooter[\"default\"].contactUsNowNumber);\nhomepage.getHeaderContactUsLink().should('have.prop', 'href', _headerFooter[\"default\"].contactUsLink).should('have.attr', 'title', _headerFooter[\"default\"].contactUsTitle).should('have.text', _headerFooter[\"default\"].contactUsText);\nhomepage.getHeaderSignInLink().should('have.prop', 'href', _headerFooter[\"default\"].signInLink).should('have.attr', 'title', _headerFooter[\"default\"].signInTitle).should('contain.text', _headerFooter[\"default\"].signInText);\nhomepage.getHomePageHeaderLogo().should('have.attr', 'title', _headerFooter[\"default\"].headerLogoTitle).should('have.prop', 'href', _headerFooter[\"default\"].headerLogoLink);",
+              "err": {},
+              "uuid": "59c4dbae-4e1d-46c3-84d3-1aa696ccf3de",
+              "parentUUID": "af70bde7-5db6-4d9c-8401-75b061f0f8ec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verification of the homepage footer",
+              "fullTitle": "Navigate to multiple pages of the website and automate verification of the header and footer. verification of the homepage footer",
+              "timedOut": null,
+              "duration": 857,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('validating the static footer text');\nhomepage.getAllFooterInfo().should('contains.text', _headerFooter[\"default\"].footerStaticText);\ncy.log('validating the categories block');\nhomepage.getFooterCategoriesBlock().should('have.length', 1).each(function ($el, index) {\n  cy.wrap($el).should('contain.text', _headerFooter[\"default\"].footerCategoriesList[index]);\n  cy.wrap($el).should('have.attr', 'href', _headerFooter[\"default\"].footerCategoryLink);\n  cy.wrap($el).should('have.attr', 'title', _headerFooter[\"default\"].footerCategoryTitle);\n});\ncy.log('validating social block');\nhomepage.getFooterSocialBlock().should('have.length', 4).each(function ($el, index) {\n  cy.wrap($el).should('contain.text', _headerFooter[\"default\"].socialList[index]);\n  cy.wrap($el).should('have.attr', 'href');\n  cy.wrap($el).should('have.attr', 'target', '_blank');\n});\ncy.log('validating the Footer Information block');\nhomepage.getFooterInformationBlock().should('have.length', 8).each(function ($el, index) {\n  cy.wrap($el).should('contain.text', _headerFooter[\"default\"].footerInfoList[index]);\n  cy.wrap($el).should('have.attr', 'href');\n  cy.wrap($el).should('have.attr', 'title', _headerFooter[\"default\"].footerInfoList[index]);\n});\ncy.log('validating the Footer My Account block');\nhomepage.getFooterMyAccountBlock().should('have.length', 4).each(function ($el, index) {\n  cy.wrap($el).should('contain.text', _headerFooter[\"default\"].footerMyAccountList[index]);\n  cy.wrap($el).should('have.attr', 'href');\n});\ncy.log('validating the footer Store information');\nhomepage.getFooterStoreInfoBlock().should('have.length', 3).each(function ($el, index) {\n  cy.wrap($el).should('contain.text', _headerFooter[\"default\"].footerStoreInfoList[index]);\n});\nhomepage.getStorePhoneNumber().should('have.text', _headerFooter[\"default\"].storePhoneNum);\nhomepage.getStoreEmailAddress().should('have.text', _headerFooter[\"default\"].storeEmailAddress);",
+              "err": {},
+              "uuid": "41348a52-d253-457c-8d0b-a4256361715c",
+              "parentUUID": "af70bde7-5db6-4d9c-8401-75b061f0f8ec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "59c4dbae-4e1d-46c3-84d3-1aa696ccf3de",
+            "41348a52-d253-457c-8d0b-a4256361715c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4717,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
