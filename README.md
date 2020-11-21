@@ -3,7 +3,7 @@
 # Steps to run this project at your local system?
 
 ## clone this repo to a local directory
-git@github.com:<<your-github-username>>/automationpracticecypress.git
+git@github.com:<<your-username>>/automationpracticecypress.git
 
 ## cd into the cloned repo
 cd Axelerant
@@ -46,6 +46,6 @@ Data on the site is static
 1. Navigate to multiple pages of the website and automate verification of the header and footer.
 2. Automate Newsletter subscription scenarios. The newsletter subscription is placed in the footer.
 3. Automate Women > Dresses > Summer Dresses listing page
-    a. Apply any one available filter and verify the results
-    b. Apply sorting options - Price and Product name and verify the results
+    - Apply any one available filter and verify the results
+    - Apply sorting options - Price and Product name and verify the results
 4. Verify the checkout journey by adding any product to the cart.
