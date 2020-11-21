@@ -3,7 +3,7 @@
 # Steps to run this project at your local system?
 
 ## clone this repo to a local directory
-git@github.com:<<your-username>>/automationpracticecypress.git
+git@github.com:<your-github-username>/automationpracticecypress.git
 
 ## cd into the cloned repo
 cd Axelerant
