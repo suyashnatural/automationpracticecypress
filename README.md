@@ -3,23 +3,23 @@ Project to automate the website "http://automationpractice.com/" using cypress.i
 
 ## Steps to run this project at your local system
 
-## clone this repo to a local directory
-- with ssl
+## Step-1: clone this repo to a local directory
+- "with ssl" -or-
 git@github.com:suyashnatural/automationpracticecypress.git
 
-- with https
+- "with https" -or-
 https://github.com/suyashnatural/automationpracticecypress.git
 
-- with github cli
+- "with github cli"
 gh repo clone suyashnatural/automationpracticecypress
 
-## cd into the cloned repo
+## Step-2: cd into the cloned repo
 cd Axelerant
 
-## install the node_modules
+## Step-3: install the node_modules
 npm install
 
-## To run the tests in Command Line (CLI) and headless mode (default electron browser)
+## Step-4: To run the tests in Command Line (CLI) and headless mode (default electron browser)
 npm run test
 
 ## Crossbrowsers 
