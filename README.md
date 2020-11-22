@@ -5,16 +5,16 @@ Project to automate the website "http://automationpractice.com/" using cypress.i
 
 ## Step-1: clone this repo to a local directory
 - "with ssl" -->
-git@github.com:suyashnatural/automationpracticecypress.git
+git clone git@github.com:suyashnatural/automationpracticecypress.git
 
 - "with https" -->
-https://github.com/suyashnatural/automationpracticecypress.git
+git clone https://github.com/suyashnatural/automationpracticecypress.git
 
 - "with github cli" -->
 gh repo clone suyashnatural/automationpracticecypress
 
 ## Step-2: cd into the cloned repo
-cd automationpracticscypress
+cd automationpracticecypress
 
 ## Step-3 : Install Cypress
 [Follow these instructions to install cypress](https://docs.cypress.io/guides/getting-started/installing-cypress.html#System-requirements)
